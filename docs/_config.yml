@@ -1,0 +1,107 @@
+remote_theme: mmistakes/so-simple-theme@3.2.0
+locale: en-US
+title: "GROBAWORKS"
+description: "A Groba place to show our Groba work."
+baseurl: "/"
+url: "https://grobaworks.github.io/"
+logo: "/images/groba.png"
+date_format: "%B %-d, %Y"
+read_time: true
+words_per_minute: # 200
+skin: "/assets/css/skins/dark.css"
+mathjax:
+  enable: true
+  combo: "tex-svg"
+  tags: "ams"
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
+# twitter:
+#   username: ""
+
+# Liquid
+liquid:
+  error_mode: strict
+
+# Build settings
+permalink: /:categories/:title/
+markdown: kramdown
+feed:
+  path: atom.xml
+
+# Pagination - https://jekyllrb.com/docs/pagination/
+paginate: 10
+paginate_path: /page:num/
+
+# Search
+search_full_content: false
+
+# Taxonomy pages
+category_archive_path: "/categories/#"
+tag_archive_path: "/tags/#"
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-redirect-from
+  - jekyll-remote-theme
+
+# Collections
+collections:
+  roadmap:
+    output: true
+    permalink: /:collection/:path/
+
+# Front Matter Defaults
+defaults:
+  # Post defaults
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      share: true
+  # Roadmap defaults
+  - scope:
+      path: "_roadmap"
+      type: roadmap
+    values:
+      layout: page
+      share: true
+      readtime: false
+
+# Site Author
+author:
+  name: Drew Cannedy
+  # picture: 
+  # email:
+  # twitter:
+  # links:
+  #   - title: Twitter
+  #     url: https://twitter.com/mmistakes
+  #     icon: fab fa-twitter-square
+  #   - title: Instagram
+  #     url: https://instagram.com/mmistakes
+  #     icon: fab fa-instagram
+  #   - title: GitHub
+  #     url: https://github.com/mmistakes
+  #     icon: fab fa-github-square
+
+# Footer Links
+footer_links:
+  # - title: Twitter
+  #   url: https://twitter.com/mmistakes
+  #   icon: fab fa-twitter-square
+  # - title: Instagram
+  #   url: https://instagram.com/mmistakes
+  #   icon: fab fa-instagram
+  # - title: GitHub
+  #   url: https://github.com/mmistakes
+  #   icon: fab fa-github-square
+  # - title: Feed
+  #   url: atom.xml
+  #   icon: fas fa-rss-square
